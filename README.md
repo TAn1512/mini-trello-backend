@@ -41,8 +41,10 @@ npm install
 
 ### 2. Environment variables
 
-```
 Create `.env` like:
+
+
+```
 PORT=8080 JWT_SECRET= 
 EMAIL_USER= EMAIL_PASS= 
 
