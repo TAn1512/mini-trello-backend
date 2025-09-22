@@ -41,18 +41,17 @@ npm install
 
 ### 2. Environment variables
 Create `.env` like:
-PORT=8080 JWT_SECRET= 
-EMAIL_USER= EMAIL_PASS= 
+PORT=8080 JWT_SECRET= .
+EMAIL_USER= EMAIL_PASS= .
 
-FIREBASE_PROJECT_ID= 
-FIREBASE_CLIENT_EMAIL= 
-FIREBASE_PRIVATE_KEY= 
+FIREBASE_PROJECT_ID= .
+FIREBASE_CLIENT_EMAIL= .
+FIREBASE_PRIVATE_KEY= .
 
-GITHUB_CLIENT_ID= 
-GITHUB_CLIENT_SECRET= 
-GITHUB_OAUTH_CALLBACK=
+GITHUB_CLIENT_ID= .
+GITHUB_CLIENT_SECRET= .
+GITHUB_OAUTH_CALLBACK=.
 
-And copy you key in firebase into serviceAccountKey.json in /config
 
 ### 3. Firebase Service Account
 Place your **Firebase service account key** at:
