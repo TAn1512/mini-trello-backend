@@ -5,8 +5,8 @@ import { AuthService } from './auth.service';
 import { AuthController } from './auth.controller';
 import { JwtStrategy } from './strategies/jwt.strategy';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import { MailerService } from '../../common/mailer.service'; // dùng cái bạn custom
-import { initFirebase } from 'src/config/firebase.config';
+import { MailerService } from '../../common/mailer.service';
+import { initFirebase } from '../../config/firebase.config';
 
 @Module({
   imports: [

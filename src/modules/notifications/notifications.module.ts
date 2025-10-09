@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { NotificationsService } from './notifications.service';
 import { NotificationsGateway } from './notifications.gateway';
 import { ConfigService } from '@nestjs/config';
-import { initFirebase } from 'src/config/firebase.config';
+import { initFirebase } from '../../config/firebase.config';
 import { NotificationsController } from './notifications.controller';
 
 @Module({

@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { TasksService } from './tasks.service';
 import { TasksController } from './tasks.controller';
 import { ConfigService } from '@nestjs/config';
-import { initFirebase } from 'src/config/firebase.config';
+import { initFirebase } from '../../config/firebase.config';
 import { TasksGateway } from './tasks.gateway';
 
 

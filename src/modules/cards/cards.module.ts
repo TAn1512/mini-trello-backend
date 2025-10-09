@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { CardsService } from './cards.service';
 import { CardsController } from './cards.controller';
 import { ConfigService } from '@nestjs/config';
-import { initFirebase } from 'src/config/firebase.config';
+import { initFirebase } from '../../config/firebase.config';
 
 @Module({
   controllers: [CardsController],
