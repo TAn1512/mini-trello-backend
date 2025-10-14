@@ -169,7 +169,7 @@ export class AuthService {
         code,
         client_id: process.env.GOOGLE_CLIENT_ID,
         client_secret: process.env.GOOGLE_CLIENT_SECRET,
-        redirect_uri: process.env.GITHUB_OAUTH_CALLBACK,
+        redirect_uri: process.env.GOOGLE_OAUTH_CALLBACK,
         grant_type: "authorization_code",
       },
       { headers: { "Content-Type": "application/json" } }
