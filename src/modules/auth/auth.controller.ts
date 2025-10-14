@@ -32,4 +32,9 @@ export class AuthController {
   async githubLogin(@Body('code') code: string) {
     return this.authService.githubLogin(code);
   }
+
+  @Post('google')
+  googleLogin(@Body('code') code: string) {
+    return this.authService.googleLogin(code);
+  }
 }

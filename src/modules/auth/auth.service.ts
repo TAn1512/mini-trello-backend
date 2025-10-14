@@ -116,7 +116,7 @@ export class AuthService {
 
   async githubLogin(code: string) {
     try {
-      console.log('GitHub login code:', code);
+      // console.log('GitHub login code:', code);
 
       const tokenRes = await axios.post(
         'https://github.com/login/oauth/access_token',
@@ -162,4 +162,44 @@ export class AuthService {
     }
   }
 
+  async googleLogin(code: string) {
+    const { data } = await axios.post(
+      "https://oauth2.googleapis.com/token",
+      {
+        code,
+        client_id: process.env.GOOGLE_CLIENT_ID,
+        client_secret: process.env.GOOGLE_CLIENT_SECRET,
+        redirect_uri: "http://localhost:3000/google-callback",
+        grant_type: "authorization_code",
+      },
+      { headers: { "Content-Type": "application/json" } }
+    );
+
+    const userInfo = await axios.get(
+      `https://www.googleapis.com/oauth2/v2/userinfo?access_token=${data.access_token}`
+    );
+
+    const { email, name, picture } = userInfo.data;
+
+
+
+    const userRef = this.db.collection('users').doc(`${email}`);
+    const doc = await userRef.get();
+
+    if (!doc.exists) {
+      await userRef.set({
+        provider: 'github',
+        username: name,
+        email: email,
+        avatar: picture,
+        createdAt: new Date(),
+      });
+    }
+
+    const payload = { sub: email, email: email };
+    const jwt = this.jwtService.sign(payload);
+
+    return { accessToken: jwt, provider: 'google', email: email };
+
+  }
 }
