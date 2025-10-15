@@ -45,42 +45,35 @@ Create `.env` like:
 
 
 ```
-PORT=8080 
-JWT_SECRET= 
+PORT=8080
+NODE_ENV=
 
-EMAIL_USER= 
-EMAIL_PASS= 
+JWT_SECRET=
+EMAIL_USER=
+EMAIL_PASS=
 
-FIREBASE_PROJECT_ID= 
-FIREBASE_CLIENT_EMAIL= 
-FIREBASE_PRIVATE_KEY= 
+FIREBASE_PROJECT_ID=
+FIREBASE_CLIENT_EMAIL=
+FIREBASE_PRIVATE_KEY=
 
-GITHUB_CLIENT_ID= 
-GITHUB_CLIENT_SECRET= 
+GITHUB_CLIENT_ID=
+GITHUB_CLIENT_SECRET=
 GITHUB_OAUTH_CALLBACK=
+
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+GOOGLE_OAUTH_CALLBACK=
 ```
 
 
-### 3. Firebase Service Account
-Place your **Firebase service account key** at:
-```
-src/config/serviceAccountKey.json
-```
-
-👉 This file must NOT be committed. Ensure `.gitignore` includes:
-```
-src/config/serviceAccountKey.json
-.env
-```
-
-### 4. Run development server
+### 3. Run development server
 ```bash
 npm run dev
 ```
 
 Backend runs at: **http://localhost:8080**
 
-### 5. Build & Run production
+### 44. Build & Run production
 ```bash
 npm run build
 npm run start:prod
@@ -101,8 +94,8 @@ npm run start:prod
 ## ✅ Features
 - JWT authentication
 - GitHub OAuth login
+- Google OAuth login
 - Firebase integration (notifications, cloud features)
-- Email service with Nodemailer
 - Boards, cards and tasks CRUD APIs (realtime with Socket.io)
 - Notifications module (realtime with Socket.io)
 - Modular & scalable NestJS architecture
