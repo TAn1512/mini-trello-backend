@@ -2,6 +2,7 @@
 
 This is the **backend service** for Mini Trello, built with **NestJS**.  
 It provides APIs for authentication, board & card management, notifications, and tasks.
+You can try this application in: https://mini-trello-annt.vercel.app
 
 ---
 
@@ -12,8 +13,7 @@ mini-trello-backend/
 │   ├── common/
 │   │   └── mailer.service.ts       # Mailer service (SMTP, Nodemailer)
 │   ├── config/
-│   │   ├── firebase.config.ts      # Firebase Admin SDK config
-│   │   └── serviceAccountKey.json  # Firebase service account (⚠️ DO NOT COMMIT)
+│   │   └──  firebase.config.ts      # Firebase Admin SDK config
 │   ├── modules/
 │   │   ├── auth/                   # Authentication (JWT, OAuth, Guards)
 │   │   ├── boards/                 # Board module
@@ -73,7 +73,7 @@ npm run dev
 
 Backend runs at: **http://localhost:8080**
 
-### 44. Build & Run production
+### 4. Build & Run production
 ```bash
 npm run build
 npm run start:prod
